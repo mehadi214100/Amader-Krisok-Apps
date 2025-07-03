@@ -1,0 +1,139 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="#FAF8F0"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Crop Category Dropdown -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="ফসল নির্বাচন করুন"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#4E342E"
+            android:layout_marginBottom="8dp" />
+
+        <Spinner
+            android:id="@+id/cropCategorySpinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:drawable/btn_dropdown"
+            android:spinnerMode="dropdown" />
+
+        <!-- Crop Variety Dropdown -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="জাত নির্বাচন করুন"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#4E342E"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="8dp" />
+
+        <Spinner
+            android:id="@+id/cropVarietySpinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:drawable/btn_dropdown"
+            android:spinnerMode="dropdown"
+            android:enabled="false" />
+
+        <!-- Disease Info Card -->
+        <LinearLayout
+            android:id="@+id/diseaseInfoLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:layout_marginTop="24dp"
+            android:background="#FFF8E1"
+            android:visibility="gone"
+            android:elevation="4dp">
+
+            <TextView
+                android:id="@+id/diseaseTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="রোগের নাম"
+                android:textSize="20sp"
+                android:textColor="#BF360C"
+                android:textStyle="bold"
+                android:layout_marginBottom="12dp" />
+
+            <!-- Sections: Symptoms -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="লক্ষণ:"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="#33691E" />
+
+            <TextView
+                android:id="@+id/symptomsText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#424242"
+                android:textSize="14sp"
+                android:layout_marginBottom="8dp" />
+
+            <!-- Causes -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="কারণ:"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="#33691E" />
+
+            <TextView
+                android:id="@+id/causesText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#424242"
+                android:textSize="14sp"
+                android:layout_marginBottom="8dp" />
+
+            <!-- Treatment -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="চিকিৎসা:"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="#33691E" />
+
+            <TextView
+                android:id="@+id/treatmentText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#424242"
+                android:textSize="14sp"
+                android:layout_marginBottom="8dp" />
+
+            <!-- Prevention -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="প্রতিরোধ:"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="#33691E" />
+
+            <TextView
+                android:id="@+id/preventionText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#424242"
+                android:textSize="14sp" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

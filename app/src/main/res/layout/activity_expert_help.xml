@@ -1,0 +1,359 @@
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="#F5F9FF">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Header Section -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#1565C0"
+            android:padding="16dp"
+            android:layout_marginBottom="16dp"
+            android:elevation="4dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="বিশেষজ্ঞ হেল্পলাইন"
+                android:textSize="22sp"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="আপনার সমস্যার বিস্তারিত লিখুন এবং বিশেষজ্ঞদের কাছ থেকে সমাধান পান"
+                android:textSize="14sp"
+                android:textColor="#E3F2FD"
+                android:layout_marginTop="8dp"/>
+        </LinearLayout>
+
+        <!-- Question Input Section -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#FFFFFF"
+            android:padding="16dp"
+            android:layout_marginBottom="16dp"
+            android:elevation="2dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="আপনার প্রশ্ন লিখুন"
+                android:textSize="16sp"
+                android:textColor="#1565C0"
+                android:textStyle="bold"
+                android:layout_marginBottom="8dp"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:hint="বিস্তারিত লিখুন..."
+                android:gravity="top|start"
+
+                android:padding="12dp"
+                android:textSize="14sp"
+                android:textColor="#212121"
+                android:inputType="textMultiLine"
+                android:maxLines="5"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:text="প্রেরণ করুন"
+                android:background="#1565C0"
+                android:textColor="#FFFFFF"
+                android:textAllCaps="false"
+                android:layout_marginTop="16dp"
+                android:textSize="16sp"/>
+        </LinearLayout>
+
+        <!-- Contact Information Section -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="কৃষি হেল্পলাইন নম্বরসমূহ"
+            android:textSize="18sp"
+            android:textColor="#1565C0"
+            android:textStyle="bold"
+            android:layout_marginBottom="12dp"/>
+
+        <!-- BRRI Contact -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#FFFFFF"
+            android:padding="16dp"
+            android:layout_marginBottom="8dp"
+            android:elevation="2dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="ধান গবেষণা ইনস্টিটিউট (BRRI)"
+                android:textSize="16sp"
+                android:textColor="#1565C0"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="ফোন: ০১৭১১-০০১১২২, ০২-৯১১১৯২০"
+                android:textSize="14sp"
+                android:textColor="#424242"
+                android:layout_marginTop="8dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="ইমেইল: info@bri.gov.bd"
+                android:textSize="14sp"
+                android:textColor="#424242"
+                android:layout_marginTop="4dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="ঠিকানা: গাজীপুর-১৭০১"
+                android:textSize="14sp"
+                android:textColor="#424242"
+                android:layout_marginTop="4dp"/>
+        </LinearLayout>
+
+        <!-- DAE Contact -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#FFFFFF"
+            android:padding="16dp"
+            android:layout_marginBottom="8dp"
+            android:elevation="2dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="কৃষি সম্প্রসারণ অধিদপ্তর (DAE)"
+                android:textSize="16sp"
+                android:textColor="#1565C0"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="হটলাইন: ১৬১২৩"
+                android:textSize="14sp"
+                android:textColor="#424242"
+                android:layout_marginTop="8dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="ওয়েবসাইট: www.dae.gov.bd"
+                android:textSize="14sp"
+                android:textColor="#424242"
+                android:layout_marginTop="4dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="মূল কার্যালয়: ফার্মগেট, ঢাকা"
+                android:textSize="14sp"
+                android:textColor="#424242"
+                android:layout_marginTop="4dp"/>
+        </LinearLayout>
+
+        <!-- BARI Contact -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#FFFFFF"
+            android:padding="16dp"
+            android:layout_marginBottom="8dp"
+            android:elevation="2dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="বাংলাদেশ কৃষি গবেষণা ইনস্টিটিউট (BARI)"
+                android:textSize="16sp"
+                android:textColor="#1565C0"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="ফোন: ০২-৯২৫০৪৬৯, ০২-৯২৫০৪৭০"
+                android:textSize="14sp"
+                android:textColor="#424242"
+                android:layout_marginTop="8dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="ইমেইল: director@bari.gov.bd"
+                android:textSize="14sp"
+                android:textColor="#424242"
+                android:layout_marginTop="4dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="ঠিকানা: জয়দেবপুর, গাজীপুর"
+                android:textSize="14sp"
+                android:textColor="#424242"
+                android:layout_marginTop="4dp"/>
+        </LinearLayout>
+
+        <!-- Additional Contacts -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="অন্যান্য গুরুত্বপূর্ণ কৃষি সংস্থা"
+            android:textSize="18sp"
+            android:textColor="#1565C0"
+            android:textStyle="bold"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="12dp"/>
+
+        <!-- BADC Contact -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#FFFFFF"
+            android:padding="16dp"
+            android:layout_marginBottom="8dp"
+            android:elevation="2dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="বাংলাদেশ কৃষি উন্নয়ন কর্পোরেশন (BADC)"
+                android:textSize="16sp"
+                android:textColor="#1565C0"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="ফোন: ০২-৫৫০২৮০০১-৫"
+                android:textSize="14sp"
+                android:textColor="#424242"
+                android:layout_marginTop="8dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="ওয়েবসাইট: www.badc.gov.bd"
+                android:textSize="14sp"
+                android:textColor="#424242"
+                android:layout_marginTop="4dp"/>
+        </LinearLayout>
+
+        <!-- BLRI Contact -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#FFFFFF"
+            android:padding="16dp"
+            android:layout_marginBottom="8dp"
+            android:elevation="2dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="প্রাণিসম্পদ গবেষণা ইনস্টিটিউট (BLRI)"
+                android:textSize="16sp"
+                android:textColor="#1565C0"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="ফোন: ০২-৯২৫১৭৬০"
+                android:textSize="14sp"
+                android:textColor="#424242"
+                android:layout_marginTop="8dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="ইমেইল: info@blri.gov.bd"
+                android:textSize="14sp"
+                android:textColor="#424242"
+                android:layout_marginTop="4dp"/>
+        </LinearLayout>
+
+        <!-- Emergency Contacts -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="জরুরী যোগাযোগ"
+            android:textSize="18sp"
+            android:textColor="#1565C0"
+            android:textStyle="bold"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="12dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#FFFFFF"
+            android:padding="16dp"
+            android:layout_marginBottom="8dp"
+            android:elevation="2dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="কৃষি তথ্য সার্ভিস"
+                android:textSize="16sp"
+                android:textColor="#1565C0"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="টোল ফ্রী নম্বর: ১৬১২৩"
+                android:textSize="14sp"
+                android:textColor="#424242"
+                android:layout_marginTop="8dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="২৪/৭ কৃষি পরামর্শ সেবা"
+                android:textSize="14sp"
+                android:textColor="#424242"
+                android:layout_marginTop="4dp"/>
+        </LinearLayout>
+
+        <!-- Footer Note -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="কৃষি বিষয়ক যেকোনো সমস্যা বা পরামর্শের জন্য উল্লিখিত নম্বরগুলোতে যোগাযোগ করুন"
+            android:textSize="13sp"
+            android:textColor="#616161"
+            android:layout_marginTop="16dp"
+            android:lineSpacingExtra="4dp"
+            android:textAlignment="center"/>
+    </LinearLayout>
+</ScrollView>

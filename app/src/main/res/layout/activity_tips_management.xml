@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="#FFFFFF">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="দৈনিক টিপস ম্যানেজমেন্ট (অ্যাডমিন)"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="16dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="টিপসের বিষয়বস্তু লিখুন:"
+        android:textColor="#000000"
+        android:layout_marginBottom="8dp"/>
+
+    <EditText
+        android:id="@+id/et_tips_content"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:background="@drawable/edittext_bg"
+        android:gravity="start|top"
+        android:hint="আজকের টিপস লিখুন..."
+        android:inputType="textMultiLine"
+        android:padding="12dp"
+        android:textColor="#000000"
+        android:textColorHint="#808080"/>
+
+    <Button
+        android:id="@+id/btn_save_tips"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:backgroundTint="#4CAF50"
+        android:text="সংরক্ষণ করুন"
+        android:textColor="#FFFFFF"/>
+
+</LinearLayout>
