@@ -14,6 +14,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Material3.DayNight.NoActionBar">
         <activity
+            android:name=".MarketPriceManagement"
+            android:exported="false" />
+        <activity
             android:name=".DiseaseManagementActivity"
             android:exported="false" />
         <activity
@@ -50,12 +53,12 @@
         <activity
             android:name=".MarketPriceActivity"
             android:exported="false" />
-
         <activity
             android:name=".TipsManagementActivity"
+            android:exported="false"
             android:label="টিপস ম্যানেজমেন্ট"
-            android:parentActivityName=".AdminActivity"
-            android:exported="false" />
+            android:parentActivityName=".AdminActivity" />
+
     </application>
 
 </manifest>

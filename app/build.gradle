@@ -1,6 +1,6 @@
 plugins {
     alias(libs.plugins.android.application)
-    alias(libs.plugins.google.gms.google.services)
+    alias(libs.plugins.google.gms.google.services) // Must be last
 }
 
 android {
@@ -13,7 +13,6 @@ android {
         targetSdk 35
         versionCode 1
         versionName "1.0"
-
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
@@ -23,17 +22,19 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_11
         targetCompatibility JavaVersion.VERSION_11
     }
+
     buildFeatures {
         viewBinding true
     }
 }
 
 dependencies {
-    // AndroidX libraries
+    // AndroidX
     implementation libs.appcompat
     implementation libs.material
     implementation libs.activity
@@ -41,19 +42,14 @@ dependencies {
     implementation libs.navigation.fragment
     implementation libs.navigation.ui
 
+    // Firebase (using BOM)
+    implementation platform(libs.firebase.bom)
+    implementation libs.firebase.auth
+    implementation libs.firebase.database
+    implementation libs.firebase.firestore
+
     // Testing
     testImplementation libs.junit
     androidTestImplementation libs.ext.junit
     androidTestImplementation libs.espresso.core
-
-    // Firebase BoM (Bill of Materials) - manages all Firebase library versions
-    implementation platform('com.google.firebase:firebase-bom:32.8.0')
-
-    // Firebase dependencies (versions managed by BoM)
-    implementation 'com.google.firebase:firebase-auth'
-    implementation 'com.google.firebase:firebase-firestore'
-    implementation 'com.google.firebase:firebase-storage'
-
-    // Material Components (updated to use BoM-compatible version)
-    implementation 'com.google.android.material:material:1.11.0'
 }

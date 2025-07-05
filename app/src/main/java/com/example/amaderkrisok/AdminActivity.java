@@ -43,6 +43,9 @@ public class AdminActivity extends AppCompatActivity {
         diseaseManagementBtn.setOnClickListener(v ->
                 startActivity(new Intent(AdminActivity.this, DiseaseManagementActivity.class)));
 
+        marketManagementBtn.setOnClickListener(v ->
+                startActivity(new Intent(AdminActivity.this, MarketPriceManagement.class)));
+
         tipsManagementBtn.setOnClickListener(v ->
                 startActivity(new Intent(AdminActivity.this, TipsManagementActivity.class)));
 
