@@ -13,6 +13,15 @@
         android:orientation="vertical"
         android:padding="12dp">
 
+        <!-- Loading Indicator -->
+        <ProgressBar
+            android:id="@+id/loadingIndicator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="16dp"
+            android:visibility="gone" />
+
         <!-- Header Section -->
         <LinearLayout
             android:layout_width="match_parent"
@@ -34,6 +43,7 @@
                 android:paddingStart="12dp">
 
                 <TextView
+                    android:id="@+id/headerTitle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="আজকের বাজার দর"
@@ -42,6 +52,7 @@
                     android:textStyle="bold" />
 
                 <TextView
+                    android:id="@+id/dateTextView"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="ঢাকা, ২৫ জুন ২০২৫"
@@ -57,7 +68,9 @@
             android:orientation="horizontal"
             android:paddingBottom="12dp">
 
+            <!-- Highest Price Card -->
             <com.google.android.material.card.MaterialCardView
+                android:id="@+id/highestPriceCard"
                 android:layout_width="0dp"
                 android:layout_height="120dp"
                 android:layout_weight="1"
@@ -82,6 +95,7 @@
                         android:textSize="14sp" />
 
                     <TextView
+                        android:id="@+id/highestPriceProduct"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="4dp"
@@ -91,6 +105,7 @@
                         android:textStyle="bold" />
 
                     <TextView
+                        android:id="@+id/highestPriceValue"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="4dp"
@@ -101,7 +116,9 @@
                 </LinearLayout>
             </com.google.android.material.card.MaterialCardView>
 
+            <!-- Lowest Price Card -->
             <com.google.android.material.card.MaterialCardView
+                android:id="@+id/lowestPriceCard"
                 android:layout_width="0dp"
                 android:layout_height="120dp"
                 android:layout_weight="1"
@@ -126,6 +143,7 @@
                         android:textSize="14sp" />
 
                     <TextView
+                        android:id="@+id/lowestPriceProduct"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="4dp"
@@ -135,6 +153,7 @@
                         android:textStyle="bold" />
 
                     <TextView
+                        android:id="@+id/lowestPriceValue"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="4dp"
@@ -151,8 +170,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:cardCornerRadius="12dp"
-            app:cardElevation="2dp"
-            app:cardBackgroundColor="#FFFFFF">
+            app:cardElevation="2dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -197,276 +215,22 @@
                         android:textStyle="bold" />
                 </LinearLayout>
 
-                <!-- List Items -->
-                <!-- Item 1 -->
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:background="#F1F5F9" />
-
+                <!-- Price List Container -->
                 <LinearLayout
+                    android:id="@+id/priceListContainer"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:padding="14dp">
+                    android:orientation="vertical">
 
-                    <LinearLayout
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="2"
-                        android:orientation="horizontal">
+                    <!-- Price items will be added dynamically here -->
 
-                        <ImageView
-                            android:layout_width="26dp"
-                            android:layout_height="26dp"
-                            android:layout_marginEnd="10dp"
-                            android:src="@drawable/ic_rice"
-                            app:tint="#2563EB" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="চাল"
-                            android:textColor="#1E293B"
-                            android:textSize="15sp" />
-                    </LinearLayout>
-
-                    <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:gravity="end"
-                        android:text="৫৫ টাকা"
-                        android:textColor="#1E293B"
-                        android:textSize="15sp" />
-
-                    <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:gravity="end"
-                        android:text="↑ ২ টাকা"
-                        android:textColor="#16A34A"
-                        android:textSize="15sp"
-                        android:textStyle="bold" />
-                </LinearLayout>
-
-                <!-- Item 2 -->
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:background="#F1F5F9" />
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:padding="14dp">
-
-                    <LinearLayout
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="2"
-                        android:orientation="horizontal">
-
-                        <ImageView
-                            android:layout_width="26dp"
-                            android:layout_height="26dp"
-                            android:layout_marginEnd="10dp"
-                            android:src="@drawable/ic_lentils"
-                            app:tint="#2563EB" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="ডাল"
-                            android:textColor="#1E293B"
-                            android:textSize="15sp" />
-                    </LinearLayout>
-
-                    <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:gravity="end"
-                        android:text="১২০ টাকা"
-                        android:textColor="#1E293B"
-                        android:textSize="15sp" />
-
-                    <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:gravity="end"
-                        android:text="→ স্থির"
-                        android:textColor="#64748B"
-                        android:textSize="15sp"
-                        android:textStyle="bold" />
-                </LinearLayout>
-
-                <!-- Item 3 -->
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:background="#F1F5F9" />
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:padding="14dp">
-
-                    <LinearLayout
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="2"
-                        android:orientation="horizontal">
-
-                        <ImageView
-                            android:layout_width="26dp"
-                            android:layout_height="26dp"
-                            android:layout_marginEnd="10dp"
-                            android:src="@drawable/ic_flour"
-                            app:tint="#2563EB" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="আটা"
-                            android:textColor="#1E293B"
-                            android:textSize="15sp" />
-                    </LinearLayout>
-
-                    <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:gravity="end"
-                        android:text="৪০ টাকা"
-                        android:textColor="#1E293B"
-                        android:textSize="15sp" />
-
-                    <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:gravity="end"
-                        android:text="↓ ১ টাকা"
-                        android:textColor="#DC2626"
-                        android:textSize="15sp"
-                        android:textStyle="bold" />
-                </LinearLayout>
-
-                <!-- Item 4 -->
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:background="#F1F5F9" />
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:padding="14dp">
-
-                    <LinearLayout
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="2"
-                        android:orientation="horizontal">
-
-                        <ImageView
-                            android:layout_width="26dp"
-                            android:layout_height="26dp"
-                            android:layout_marginEnd="10dp"
-                            android:src="@drawable/ic_oil"
-                            app:tint="#2563EB" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="তেল"
-                            android:textColor="#1E293B"
-                            android:textSize="15sp" />
-                    </LinearLayout>
-
-                    <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:gravity="end"
-                        android:text="১৭০ টাকা"
-                        android:textColor="#1E293B"
-                        android:textSize="15sp" />
-
-                    <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:gravity="end"
-                        android:text="↑ ৫ টাকা"
-                        android:textColor="#16A34A"
-                        android:textSize="15sp"
-                        android:textStyle="bold" />
-                </LinearLayout>
-
-                <!-- Item 5 -->
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:background="#F1F5F9" />
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:padding="14dp">
-
-                    <LinearLayout
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="2"
-                        android:orientation="horizontal">
-
-                        <ImageView
-                            android:layout_width="26dp"
-                            android:layout_height="26dp"
-                            android:layout_marginEnd="10dp"
-                            android:src="@drawable/ic_onion"
-                            app:tint="#2563EB" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="পেঁয়াজ"
-                            android:textColor="#1E293B"
-                            android:textSize="15sp" />
-                    </LinearLayout>
-
-                    <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:gravity="end"
-                        android:text="৩০ টাকা"
-                        android:textColor="#1E293B"
-                        android:textSize="15sp" />
-
-                    <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:gravity="end"
-                        android:text="↓ ১০ টাকা"
-                        android:textColor="#DC2626"
-                        android:textSize="15sp"
-                        android:textStyle="bold" />
                 </LinearLayout>
             </LinearLayout>
         </com.google.android.material.card.MaterialCardView>
 
         <!-- Last Updated -->
         <TextView
+            android:id="@+id/lastUpdatedTextView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
